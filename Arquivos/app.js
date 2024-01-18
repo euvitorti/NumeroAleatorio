@@ -2,6 +2,7 @@
 
 // LISTA PARA ARMAZENAR OS NÚMEROS
 let listaNumerosSorteados = [];
+let numeroLimite = 10;
 
 function exiberTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -45,7 +46,12 @@ function verificarChute() {
 // GERAR NÚMERO ALEATÓRIO
 let numeroSecreto = gerarNumero();
 function gerarNumero() {
-    let numeroEscolhido = parseInt(Math.random() * 5 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeDeElementosNaLista = listaNumerosSorteados.length;
+
+    if (quantidadeDeElementosNaLista == 5) {
+        listaNumerosSorteados = [];
+    }
 
     // includes - SE ESTÁ INCLUÍDO NA LISTA
     if (listaNumerosSorteados.includes(numeroEscolhido)) {
