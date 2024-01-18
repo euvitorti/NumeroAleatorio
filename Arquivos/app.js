@@ -1,10 +1,17 @@
 // MANIPULANDO O DOM
-let titulo = document.querySelector('h1');
-titulo.innerHTML = 'Hello World!';
+function exiberTextoNaTela(tag, texto) {
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
 
-let paragrafo = document.querySelector('p');
-paragrafo.innerHTML = 'Escolhe um número entre 1 e 10';
+exiberTextoNaTela('h1', 'Hello World!');
+exiberTextoNaTela('p', 'Escolha um número entre 1 e 100');
 
-function verificarChute(){
-    
+function verificarChute() {
+    let chute = document.querySelector('input').value;
+}
+
+let numeroSecreto = gerarNumero();
+function gerarNumero() {
+    return parseInt(Math.random() * 100 + 1);
 }
