@@ -7,6 +7,9 @@ let numeroLimite = 10;
 function exiberTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+    
+    //INCLUSÃO
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', { rate: 1.2 });
 }
 
 function exiberMensagemInicial() {
