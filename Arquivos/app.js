@@ -11,7 +11,7 @@ function exiberTextoNaTela(tag, texto) {
 }
 
 function exiberMensagemInicial() {
-    exiberTextoNaTela('h1', 'Hello World!');
+    exiberTextoNaTela('h1', 'Tente a sorte');
     exiberTextoNaTela('p', 'Escolha um número entre 1 e 100');
 }
 
