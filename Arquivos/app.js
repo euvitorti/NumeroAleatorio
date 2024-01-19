@@ -1,8 +1,6 @@
-// MANIPULANDO O DOM
-
 // LISTA PARA ARMAZENAR OS NÚMEROS
 let listaNumerosSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = 100;
 
 function exiberTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
